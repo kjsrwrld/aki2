@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to aki, with love</title>
+    <style>
+        body {
+            font-family: 'MS Sans Serif', Tahoma, Geneva, sans-serif;
+            background-color: #e6f0ff; /* Soft pastel blue */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .window {
+            background-color: #ffffff;
+            border: 2px solid #a6c8ff; /* Light blue */
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 4px 4px 10px rgba(166, 200, 255, 0.5);
+            margin-bottom: 20px;
+        }
+        .title-bar {
+            background-color: #a6c8ff; /* Light blue */
+            color: white;
+            padding: 8px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+        }
+        .title-bar button {
+            background-color: #cce0ff; /* Very light blue */
+            border: 1px solid #99c2ff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 14px;
+        }
+        .title-bar button:hover {
+            background-color: #80b3ff;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            font-size: 15px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+        button {
+            background-color: #a6c8ff; /* Light blue */
+            border: 2px solid #80b3ff; /* Medium blue */
+            color: white;
+            border-radius: 12px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #80b3ff;
+        }
+        .letter-part {
+            display: none;
+            margin-top: 20px;
+            background: #f2faff; /* Very soft blue */
+            padding: 15px;
+            border: 1px solid #a6c8ff;
+            border-radius: 15px;
+            box-shadow: inset 2px 2px #fff, inset -2px -2px #80b3ff;
+        }
+        iframe {
+            margin-top: 10px;
+            border: none;
+            width: 100%;
+            max-width: 600px;
+            height: 80px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span>aki.exe</span>
+            <button title="Close">✕</button>
+        </div>
+        <div class="content">
+            <p><strong><i>kung asa na ni padulong, ang lawod andam kong langoyon</i></strong></p>
+            <div class="button-container">
+                <button onclick="showPart()">Open</button>
+                <div id="letter-part" class="letter-part">
+                    <p>My Aki,</p>
+                    <p>I know I've already told you how I feel—and maybe, I'm saying too much, but I wanted to ask you properly. Would you give me the honour of courting you, Aki? Not just in words, but in my own quiet yet sometimes loud gestures, and with all that I am. I'd like to walk beside you through everything that life throws at us, with your hand in mine. </p>
+                    <p>Let me give you everything you deserve, Janeen.</p>
+                    <div id="response-buttons">
+                        <button onclick="handleResponse()">Yes!!</button>
+                        <button onclick="handleResponse()">Yes!!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spotify Embed -->
+    <iframe src="https://open.spotify.com/embed/track/3fXUrWDhm8OxrNxGntvyhw?utm_source=generator"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+
+    <script>
+        function showPart() {
+            const part = document.getElementById("letter-part");
+            if (part) {
+                part.style.display = "block";
+            }
+        }
+
+        function handleResponse() {
+            const letterPart = document.getElementById("letter-part");
+            letterPart.innerHTML = `
+                <p>thank you, and to more adventures with you, my aki!</p>
+                <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" 
+                     alt="Cat Hug Kiss" 
+                     style="max-width:100%; border: 2px solid #80b3ff; border-radius: 16px; margin-top: 10px;">
+            `;
+        }
+    </script>
+</body>
+</html>
